@@ -51,6 +51,34 @@ sudo dpkg -i ChatGPT-*.deb
 sudo apt-get install -f  # Risolve eventuali dipendenze mancanti
 ```
 
+## 🧹 Disinstallazione pulita
+
+### AppImage
+
+```bash
+rm -f ChatGPT-*.AppImage
+rm -rf ~/.config/ChatGPT\ Desktop
+```
+
+L’AppImage è portabile: basta eliminare il file scaricato e, se vuoi azzerare le impostazioni, rimuovere anche la cartella di configurazione.
+
+### RPM
+
+```bash
+sudo dnf remove chatgpt-desktop
+rm -rf ~/.config/ChatGPT\ Desktop
+```
+
+### DEB
+
+```bash
+sudo apt remove chatgpt-desktop
+sudo apt autoremove --purge chatgpt-desktop
+rm -rf ~/.config/ChatGPT\ Desktop
+```
+
+La directory `~/.config/ChatGPT Desktop` contiene dati locali (sessioni webview, cache, ecc.). Eliminandola ripulisci completamente il profilo dell’app.
+
 ## 🛠️ Sviluppo
 
 Se vuoi provare l’app dal sorgente o contribuire:
