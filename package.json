@@ -6,7 +6,10 @@
   "scripts": {
     "start": "electron ./src/main.js",
     "dev": "NODE_ENV=development electron ./src/main.js",
-    "dist": "electron-builder --linux deb rpm AppImage"
+    "dist": "electron-builder --linux deb rpm AppImage",
+    "build:appimage": "electron-builder --linux AppImage",
+    "build:deb": "electron-builder --linux deb",
+    "build:rpm": "electron-builder --linux rpm"
   },
   "keywords": [
     "electron",
