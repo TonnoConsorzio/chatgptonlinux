@@ -18,7 +18,7 @@
     "desktop",
     "linux"
   ],
-  "author": "",
+  "author": "TonnoConsorzio <alessiobellan@proton.me>",
   "license": "MIT",
   "devDependencies": {
     "electron": "^28.3.3",
