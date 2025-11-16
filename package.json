@@ -1,0 +1,43 @@
+{
+  "name": "chatgpt_on_linux",
+  "version": "1.0.0",
+  "description": "Electron wrapper that keeps ChatGPT one click away on Linux desktops.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ./src/main.js",
+    "dev": "NODE_ENV=development electron ./src/main.js",
+    "dist": "electron-builder --linux deb rpm AppImage"
+  },
+  "keywords": [
+    "electron",
+    "chatgpt",
+    "desktop",
+    "linux"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.chatgpt.desktop",
+    "productName": "ChatGPT Desktop",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "category": "Network",
+      "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
+    }
+  }
+}
